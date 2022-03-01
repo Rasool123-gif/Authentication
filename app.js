@@ -40,11 +40,6 @@ app.get("/login",function(req,res){
 app.get("/register",function(req,res){
     res.render("register");
 });
-app.get("/forgot",function(req,res){
-    res.render("forgot");
-});
-
-
 
 
 app.post("/register",function(req,res){
@@ -83,7 +78,7 @@ app.post("/login",function(req,res){
                         res.render("loginafter",{pw:password,hp:foundUser.password});
                     }
                     else{
-                        res.render('forgot')
+                        res.render('wrong')
                     }
                 });
             }
